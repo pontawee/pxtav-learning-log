@@ -1,23 +1,29 @@
 #include <stdio.h>
 
 int main(void) {
-    int division;
+    printf("Enter an integer to convert to binary: ");
+    int Integer;
     int modulo[64];
     int index = 0, result;
+    int count;
 
-    scanf("%d", &division);
-    if (division == 0) {
-        printf("0");
+    scanf("%d", &Integer);
+    if (Integer == 0) {
+        modulo[index] = 0;
+        index++;
     } else {
-        while (division > 0) {
-            result = division % 2;
+        while (Integer > 0) {
+            result = Integer % 2;
             modulo[index] = result;
-            division = division / 2;
+            Integer = Integer / 2;
             index++;
         }
-        for (index = index - 1; index >= 0; index--) {
-            printf("%d", modulo[index]);
-        }
     }
-     return 0;
+    count = index;
+    printf("result: ");
+    for (index = index - 1; index >= 0; index--) {
+        printf("%d", modulo[index]);
+    }
+    printf("\nCount: %d\n", count);
+    return 0;
 }

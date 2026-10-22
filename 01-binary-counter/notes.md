@@ -1,1 +1,1 @@
-total time taken: 2 hours 43 minutes
+total time taken: 3 hours 54 minutes
